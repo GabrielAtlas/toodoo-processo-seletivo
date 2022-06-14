@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toodoo Processo Seletivo - Questão #15</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">A</div>
+      <div class="e">E</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+    </div>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header header header header header"
+        "b b b b e e"
+        "c c d d e e";
+      gap: 10px;
+      background-color: #858585;
+      padding: 10px;
+    }
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+    .header {
+      grid-area: header;
+    }
+    .e {
+      grid-area: e;
+    }
+    .b {
+      grid-area: b;
+    }
+    .c {
+      grid-area: c;
+    }
+    .d {
+      grid-area: d;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header header header header header"
+          "b b b b b b"
+          "c c c d d d"
+          "e e e e e e";
+        gap: 10px;
+        background-color: #858585;
+        padding: 10px;
+      }
+    }
+  </style>
+</html>
